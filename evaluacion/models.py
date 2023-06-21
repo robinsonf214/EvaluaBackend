@@ -23,7 +23,6 @@ class Categoria(models.Model):
     caracteristicas = models.ManyToManyField('Caracteristica')
     nombre = models.CharField(max_length=70)
     descripcion = models.CharField(max_length=300)
-    calificacion = models.IntegerField()
     class Meta:
         db_table = 'categoria'
 
