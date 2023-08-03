@@ -28,7 +28,6 @@ class Categoria(models.Model):
 
 class Caracteristica(models.Model):
     id_caracteristica = models.AutoField(primary_key=True)
-    #valoracion = models.IntegerField()
     nombre = models.CharField(max_length=70)
     class Meta:
         db_table = 'caracteristica'
@@ -37,7 +36,6 @@ class Subategoria(models.Model):
     id_subcategoria = models.AutoField(primary_key=True)
     caracteristicas = models.ManyToManyField('Caracteristica')
     nombre = models.CharField(max_length=70)
-    #calificacion = models.IntegerField()
     class Meta:
         db_table = 'subategoria'
 

@@ -49,6 +49,7 @@ INSTALLED_APPS = [
 
 
 MIDDLEWARE = [
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -114,7 +115,10 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator',
     },
 ]
+#CORS POLICIES 
+CORS_ALLOWED_ORIGINS = ["*"]
 
+CORS_ORIGIN_WHITELIST = ["*"]
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
