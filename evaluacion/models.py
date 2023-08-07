@@ -3,10 +3,11 @@ from django.db import models
 # Create your models here.
 class Evaluacion(models.Model):
     id_evaluacion = models.AutoField(primary_key=True)
-    user = models.CharField(max_length=50)
+    #user = models.CharField(max_length=50)
     nombre = models.CharField(max_length=50)
     informacion = models.CharField(max_length=300)
-    nota_final = models.IntegerField()
+    nota_final = models.IntegerField(null=True)
+    estilo = models.CharField(max_length=50)
     class Meta:
         db_table = 'evaluacion'
 
