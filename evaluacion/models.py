@@ -6,7 +6,7 @@ class Evaluacion(models.Model):
     #user = models.CharField(max_length=50)
     nombre = models.CharField(max_length=50)
     informacion = models.CharField(max_length=300)
-    nota_final = models.IntegerField(null=True)
+    nota_final = models.IntegerField(default=null)
     estilo = models.CharField(max_length=50)
     class Meta:
         db_table = 'evaluacion'
