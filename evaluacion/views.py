@@ -2,8 +2,8 @@ from django.shortcuts import render
 
 # Create your views here.
 from rest_framework import generics
-from .models import Evaluacion, Alimentos, Categoria
-from .serializers import EvaluacionSerializer,AlimentosSerializer, CategoriaSerializer 
+from .models import Evaluacion, Alimentos, Categoria, Estilo
+from .serializers import EvaluacionSerializer,AlimentosSerializer, CategoriaSerializer, EstiloSerializer
 
 class EvaluacionCreateView(generics.ListCreateAPIView):
     queryset = Evaluacion.objects.all()
@@ -29,3 +29,11 @@ class CategoriaCreateView(generics.ListCreateAPIView):
 class CategoriaRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
     queryset = Categoria.objects.all()
     serializer_class = CategoriaSerializer
+
+class EstiloCreateView(generics.ListCreateAPIView):
+    queryset = Estilo.objects.all()
+    serializer_class = EstiloSerializer
+
+class EstiloRetrieveUpdateDestroyView(generics.RetrieveUpdateDestroyAPIView):
+    queryset = Estilo.objects.all()
+    serializer_class = EstiloSerializer
