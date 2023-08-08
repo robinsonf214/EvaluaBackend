@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Evaluacion, Alimentos, Categoria, Caracteristica, Subategoria
+from .models import Evaluacion, Alimentos, Categoria, Caracteristica, Subategoria, Estilo
 
 class EvaluacionSerializer(serializers.ModelSerializer):
     class Meta:
@@ -24,4 +24,9 @@ class CaracteristicaSerializer(serializers.ModelSerializer):
 class SubategoriaSerializer(serializers.ModelSerializer):
     class Meta:
         model = Subategoria
+        fields = '__all__'
+
+class EstiloSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Estilo
         fields = '__all__'

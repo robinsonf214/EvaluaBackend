@@ -1,5 +1,4 @@
 asgiref==3.7.2
-backports.zoneinfo==0.2.1
 dj-database-url==2.0.0
 Django==4.2.2
 django-cors-headers==4.2.0
@@ -10,3 +9,4 @@ pytz==2023.3
 sqlparse==0.4.4
 typing-extensions==4.6.3
 whitenoise==6.4.0
+backports.zoneinfo==0.2.1;python_version<"3.9"

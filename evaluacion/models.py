@@ -14,7 +14,7 @@ class Evaluacion(models.Model):
 class Alimentos(models.Model):
     id_alimentos = models.AutoField(primary_key=True)
     nombre = models.CharField(max_length=60)
-    estilo = models.CharField(max_length=80)
+    estilo = models.ManyToManyField('Estilo')
     categorias = models.ManyToManyField('Categoria')
     class Meta:
         db_table = 'alimentos'
@@ -40,4 +40,10 @@ class Subategoria(models.Model):
     class Meta:
         db_table = 'subategoria'
 
+class Estilo(models.Model):
+    id_estilo = models.AutoField(primary_key=True)
+    nombre = models.CharField(max_length=70)
+    descripcion = models.CharField(max_length=300)
+    class Meta:
+        db_table = 'estilo'
     
