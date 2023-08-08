@@ -23,7 +23,7 @@ class Categoria(models.Model):
     id_categoria = models.AutoField(primary_key=True)
     caracteristicas = models.ManyToManyField('Caracteristica')
     nombre = models.CharField(max_length=70)
-    descripcion = models.CharField(max_length=300)
+    descripcion = models.CharField(max_length=300, null=True)
     class Meta:
         db_table = 'categoria'
 
