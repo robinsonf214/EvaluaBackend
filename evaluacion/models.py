@@ -8,6 +8,7 @@ class Evaluacion(models.Model):
     informacion = models.CharField(max_length=300)
     nota_final = models.IntegerField()
     estilo = models.CharField(max_length=50)
+    notas = models.JSONField(default=dict)
     class Meta:
         db_table = 'evaluacion'
 
