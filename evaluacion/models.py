@@ -25,7 +25,7 @@ class Categoria(models.Model):
     caracteristicas = models.ManyToManyField('Caracteristica')
     subcategorias = models.ManyToManyField('Subategoria', blank=True)
     nombre = models.CharField(max_length=70)
-    descripcion = models.CharField(max_length=300, null=True, blank=True )
+    descripcion = models.CharField(max_length=300, blank=True )
     class Meta:
         db_table = 'categoria'
 

@@ -11,5 +11,4 @@ urlpatterns = [
     path('categoria/<int:pk>/', CategoriaRetrieveUpdateDestroyView.as_view(), name='categoria-retrieve-update-destroy'),
     path('estilos/', EstiloCreateView.as_view(), name='categoria-list-create'),
     path('estilo/<int:pk>/', EstiloRetrieveUpdateDestroyView.as_view(), name='categoria-retrieve-update-destroy'),
-    
 ]
