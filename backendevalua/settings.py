@@ -116,9 +116,9 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 #CORS POLICIES 
-CORS_ALLOWED_ORIGINS = ["http://localhost:4200","*"]
+CORS_ALLOWED_ORIGINS = ["http://localhost:4200","frontevalua.onrender.com","*"]
 
-CORS_ORIGIN_WHITELIST = ["http://localhost:4200","*"]
+CORS_ORIGIN_WHITELIST = ["http://localhost:4200","frontevalua.onrender.com","*"]
 
 # Internationalization
 # https://docs.djangoproject.com/en/4.2/topics/i18n/
